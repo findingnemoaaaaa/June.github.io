@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Personal Website </title>
+	<meta name="viewport" content="width=device-width, initial scale=1.0">
+	<link rel="stylesheet" href="photos.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+</head>
+
+    <div class="topnav" id="myTopnav">
+        <a href="personalwebsite.html"> Home </a>
+        <a href="favsongs.html"> Favorite Songs </a>
+        <a href="photos.html" class="active"> Photos </a>
+        <a href="personalinfo.html" class="split"> About </a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()"> 
+        <i class="fa fa-bars"></i></a>
+    </div> 
+
+<script type="text/javascript">
+	function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+        }
+</script>
+<br>
+<body>
+    <h1> Photos </h1>
+    <br>
+        <p> The following are the photos that you would see if you go to my gallery. </p>
+    <br>
+
+
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="numbertext"> 1 / 10 </div>
+            <img src="IMG_20230707_182043.jpg" alt="MOA Eye" style="width: 100%">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext"> 2 / 10 </div>
+            <img src="IMG_20230707_181627.jpg" alt="MOA Eye Ticket" style="width: 100%">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext"> 3 / 10 </div>
+            <img src="IMG_20230707_181736.jpg" alt="Sunflower" style="width: 100%">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext"> 4 / 10 </div>
+            <img src="IMG_20230707_182843.jpg" alt="My Old Pic" style="width: 100%">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext"> 5 / 10 </div>
+            <img src="IMG_20230707_182438.jpg" alt="Zion" style="width: 100%">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext"> 6 / 10 </div>
+            <img src="IMG_20230707_182314.jpg" alt="Intramuros" style="width: 100%">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext"> 7 / 10 </div>
+            <img src="IMG_20230707_181456.jpg" alt="MOA" style="width: 100%">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext"> 8 / 10 </div>
+            <img src="IMG_20230707_181537.jpg" alt="McDO Things" style="width: 100%">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext"> 9 / 10 </div>
+            <img src="IMG_20230707_182013.jpg" alt="Intramuros Date" style="width: 100%">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext"> 10 / 10 </div>
+            <img src="IMG_20230707_182535.jpg" alt="Museum Date" style="width: 100%">
+        </div>
+
+  
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
+  <span class="dot" onclick="currentSlide(8)"></span>
+  <span class="dot" onclick="currentSlide(9)"></span>
+  <span class="dot" onclick="currentSlide(10)"></span>
+</div>
+</body>
+
+<script type="text/javascript">
+    let slideIndex = 1;
+        showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    }
+
+</script>
+</html>
